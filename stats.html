@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="./img/site-logo.png">
+    <title>FilmJunkie</title>
+
+    <!-- Halfmoon CSS -->
+    <link href="css/halfmoon-variables.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <!--
+    Or,
+    Use the following (no variables, supports IE11):
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
+    Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
+  -->
+</head>
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+    <!-- Modals go here -->
+
+    <!-- Page wrapper start -->
+    <div id="particles-js" class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom with-transitions" data-sidebar-type="full-height overlayed-sm-and-down">
+
+        <!-- Sticky alerts (toasts), empty container -->
+        <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+        <div class="sticky-alerts"></div>
+
+        <!-- Navbar start -->
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <!-- Navbar content (with toggle sidebar button) -->
+            <div class="navbar-content">
+                <button class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+            </div>
+            <!-- Navbar brand -->
+            <a href="#" class="navbar-brand hidden-md-and-down">
+                <img src="./img/site-logo.png" alt="..."> FilmJunkie.
+            </a>
+            <a href="#" class="navbar-brand hidden-md-and-up font-weight-bold">
+                <img src="./img/site-logo.png" alt="..."> FJ.
+            </a>
+            <!-- Navbar text -->
+            <!-- text-monospace = font-family shifted to monospace -->
+            <!-- Inline form with input group -->
+            <form class="form-inline ml-3 hidden-sm-and-down" action="..." method="...">
+                <!-- ml-auto = margin-left: auto -->
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Quick search" required="required">
+                    <div class="input-group-append">
+                        <button class="btn" type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Quick search</span> <!-- sr-only = show only on screen readers -->
+        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="navbar-content ml-auto">
+
+                <button class="btn btn-action mr-5 ml-20" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </button>
+                <div class="hidden-md-and-up">
+                    <form class="form-inline ml-3" action="..." method="...">
+                        <!-- ml-auto = margin-left: auto -->
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Quick search" required="required">
+                            <div class="input-group-append">
+                                <button class="btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                      <span class="sr-only">Quick search</span> <!-- sr-only = show only on screen readers -->
+                    </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Sidebar overlay -->
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <!-- Sidebar start -->
+        <div class="sidebar">
+
+            <div class="sidebar-menu">
+                <a href="#" class="sidebar-brand hidden-md-and-up">
+                    <img src="./img/site-logo.png" alt="..."> FilmJunkie.
+                </a>
+                <!-- Sidebar links (with icons) and titles -->
+                <h5 class="sidebar-title midlinehead pt-15">Important</h5>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </span> Suggest me stuff to watch
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-film" aria-hidden="true"></i>
+              </span> Top Movies
+                </a>
+                </br>
+                <h5 class="sidebar-title midlinehead">Nerd Stuff</h5>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              </span> Stats
+                </a>
+                <a href="./advanced_search.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </span> Advanced Search
+                </a>
+                <br />
+            </div>
+        </div>
+        <!-- Sidebar end -->
+
+        <!-- Content wrapper start -->
+        <div class="content-wrapper">
+            <div class="container d-lg-flex align-items-lg-center" style="background-image: url('./img/backgroundcircles.png'); background-repeat: no-repeat; background-position: top;">
+                <div class="row ml-10 mr-10">
+
+                    <!-- Hero start -->
+                    <div class="col-lg-8">
+                        <div class="content">
+
+                            <!-- Header, content, and CTAs start -->
+                            <h1 class="hero-header">
+                                <strong class="font-weight-light"><br class="hidden-sm-and-down"/><br class="hidden-sm-and-down"/><span style="font-weight:100">This might be a little insightful, maybe? IDK.</span> 
+                                    <span class="font-size-20" data-toggle="tooltip" data-title="All content watched and reviewed by Arpit Jain."><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                    </strong>
+                            </h1>
+                            <h1>
+                                <br class="hidden-sm-and-down" />
+                            </h1>
+                            <br class="hidden-md-and-up" /><br class="hidden-md-and-up" />
+                            <!-- Header, content, and CTAs end -->
+                        </div>
+                    </div>
+                    <!-- Hero end -->
+
+                    <!-- Rocket animation start -->
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center hidden-md-and-down">
+                        <img alt="Film Logo" class="img-fluid rounded" width="70%" src="./img/movie2.png">
+                    </div>
+                    <!-- Rocket animation end -->
+
+                </div>
+            </div>
+            <div class="container d-flex p-20">
+                <div class="col-9 p-10">
+                    <span class="midlinehead">All Content</span><br />
+                    <div class="row ml-10 mr-10 m-xl-20 m-lg-20 m-md-10 m-sm-10">
+                        <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div id="chartContainer"></div>
+                        </div>
+                        <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            hahahahahha
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 p-10">
+                    <span class="midlinehead">Top Tags</span><br />
+                    <div class="alert alert-primary" role="alert">
+                        <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <span class="font-size-12">Click on individual tags to view movies or series with that tag.</span>
+                    </div><br />
+                    <!-- Pill badges -->
+                    <span class="badge badge-pill text-muted">These (50)</span>
+                    <span class="badge badge-pill text-muted">are (221)</span>
+                    <span class="badge badge-pill text-muted">freaking (432)</span>
+                    <span class="badge badge-pill text-muted">beautiful (439)</span>
+                    <span class="badge badge-pill text-muted">badges (500)</span>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <!-- Content wrapper end -->
+
+        <nav class="navbar navbar-fixed-bottom">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item font-size-10">
+                    <a href="https://www.instagram.com/arpit.media/" target="_blank" rel="noopener" class="nav-link pr-5">
+                        <span class="d-none d-sm-inline">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> &nbsp;&nbsp;Follow
+                    </span>
+                        <span class="d-sm-none">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> Follow
+                    </span>
+                    </a>
+                </li>
+            </ul>
+            <span class="navbar-text text-muted font-size-10">
+            © Copyright 2021, @arpit.media
+        </span>
+        </nav>
+
+    </div>
+    <!-- Page wrapper end -->
+
+    <!-- Halfmoon JS -->
+    <script src="js/halfmoon.min.js"></script>
+</body>
+
+</html>

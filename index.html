@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="./img/site-logo.png">
+    <title>FilmJunkie</title>
+
+    <!-- Halfmoon CSS -->
+    <link href="css/halfmoon-variables.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <!--
+    Or,
+    Use the following (no variables, supports IE11):
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
+    Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
+  -->
+</head>
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+    <!-- Modals go here -->
+    <div class="modal modal-full ie-scroll-fix" id="modal-5" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" role="button" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <br><br>
+                            <div class="text-muted font-size-20 font-weight-medium">
+                                Movie
+                                <i class="fa fa-angle-right ml-5"></i>
+                            </div>
+                            <h1 class="mt-10 mb-10 font-weight-light">
+                                A Clockwork Orange
+                            </h1>
+                            <div class="midlinehead">
+                                <span class="badge font-size-14"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+                                    <i class="fa fa-heart text-danger mr-5" aria-hidden="true"></i> 8.5 <!-- text-danger = color: danger-color, mr-5 = margin-right: 0.5rem (5px) -->
+                                  </span>
+                            </div>
+                            <br>
+                            <div class="row p-10">
+                                <div class="text-center col-lg-4 col-md-6 col-sm-12  p-10">
+                                    <img src="./img/clockworkorange.jpg" class="img-fluid rounded" alt="fullscreen-modal-img">
+                                </div>
+                                <div class="font-size-18 col-lg-8 col-md-6 col-sm-12 p-10">
+                                    <p>
+                                        The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack Nicholson, Shelley Duvall, Scatman Crothers,
+                                        and Danny Lloyd. </p>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="midlinehead">
+                                <span class="ml-5 text-muted">15 / 05 / 2021</span>
+                            </div>
+                            <div class="mt-20 font-size-12">
+                                <!-- Pill badges -->
+                                <span class="badge badge-pill text-muted">These</span>
+                                <span class="badge badge-pill text-muted">are</span>
+                                <span class="badge badge-pill text-muted">freaking</span>
+                                <span class="badge badge-pill text-muted">beautiful</span>
+                                <span class="badge badge-pill text-muted">badges</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <!-- Page wrapper start -->
+    <div id="particles-js" class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom with-transitions" data-sidebar-type="full-height overlayed-sm-and-down">
+
+        <!-- Sticky alerts (toasts), empty container -->
+        <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+        <div class="sticky-alerts"></div>
+
+        <!-- Navbar start -->
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <!-- Navbar content (with toggle sidebar button) -->
+            <div class="navbar-content">
+                <button class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+            </div>
+            <!-- Navbar brand -->
+            <a href="#" class="navbar-brand hidden-md-and-down">
+                <img src="./img/site-logo.png" alt="..."> FilmJunkie.
+            </a>
+            <a href="#" class="navbar-brand hidden-md-and-up font-weight-bold">
+                <img src="./img/site-logo.png" alt="..."> FJ.
+            </a>
+            <!-- Navbar text -->
+            <!-- text-monospace = font-family shifted to monospace -->
+            <!-- Inline form with input group -->
+            <form class="form-inline ml-3 hidden-sm-and-down" action="..." method="...">
+                <!-- ml-auto = margin-left: auto -->
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Quick search" required="required">
+                    <div class="input-group-append">
+                        <button class="btn" type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Quick search</span> <!-- sr-only = show only on screen readers -->
+        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="navbar-content ml-auto">
+
+                <button class="btn btn-action mr-5 ml-20" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </button>
+                <div class="hidden-md-and-up">
+                    <form class="form-inline ml-3" action="..." method="...">
+                        <!-- ml-auto = margin-left: auto -->
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Quick search" required="required">
+                            <div class="input-group-append">
+                                <button class="btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                      <span class="sr-only">Quick search</span> <!-- sr-only = show only on screen readers -->
+                    </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Sidebar overlay -->
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <!-- Sidebar start -->
+        <div class="sidebar">
+
+            <div class="sidebar-menu">
+                <a href="#" class="sidebar-brand hidden-md-and-up">
+                    <img src="./img/site-logo.png" alt="..."> FilmJunkie.
+                </a>
+                <!-- Sidebar links (with icons) and titles -->
+                <h5 class="sidebar-title midlinehead pt-15">Important</h5>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </span> Suggest me stuff to watch
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-film" aria-hidden="true"></i>
+              </span> Top Movies
+                </a>
+                </br>
+                <h5 class="sidebar-title midlinehead">Nerd Stuff</h5>
+                <a href="stats.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              </span> Stats
+                </a>
+                <a href="./advanced_search.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </span> Advanced Search
+                </a>
+                <br />
+            </div>
+        </div>
+        <!-- Sidebar end -->
+
+        <!-- Content wrapper start -->
+        <div class="content-wrapper">
+            <div class="container d-lg-flex align-items-lg-center" style="background-image: url('./img/backgroundcircles.png'); background-repeat: no-repeat; background-position: top;">
+                <div class="row ml-10 mr-10">
+
+                    <!-- Hero start -->
+                    <div class="col-lg-8">
+                        <div class="content">
+
+                            <!-- Header, content, and CTAs start -->
+                            <h1 class="hero-header">
+                                <strong class="font-weight-light"><br class="hidden-sm-and-down"/><br class="hidden-sm-and-down"/><span style="font-weight:100">On a singular mission to discover amazing films, high brow and low brow.</span> 
+                                    <span class="font-size-20" data-toggle="tooltip" data-title="All content watched and reviewed by Arpit Jain."><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                    </strong>
+                            </h1>
+
+                            <button class="btn" type="button">What to watch &nbsp; &nbsp;<i class="fa fa-play-circle" aria-hidden="true"></i></button>
+                            <h1>
+                                <br class="hidden-sm-and-down" />
+                            </h1>
+                            <br class="hidden-md-and-up" /><br class="hidden-md-and-up" />
+                            <!-- Header, content, and CTAs end -->
+                        </div>
+                    </div>
+                    <!-- Hero end -->
+
+                    <!-- Rocket animation start -->
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center hidden-md-and-down">
+                        <img alt="Film Logo" class="img-fluid rounded" width="70%" src="./img/movie2.png">
+                    </div>
+                    <!-- Rocket animation end -->
+
+                </div>
+            </div>
+            <div class="container d-lg-flex">
+                <div class="col-12">
+                    <span class="midlinehead">Latest Stuff I watched</span></div>
+            </div>
+            <div class="container d-lg-flex" id="all-movies">
+                <div class="row ml-10 mr-10 m-xl-20 m-lg-20 m-md-10 m-sm-10">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <a href="#modal-5" class="text-decoration-none">
+                            <!-- Card with no padding with multiple content containers nested inside of it -->
+                            <div class="mw-full">
+                                <!-- w-600 = width: 60rem (600px), mw-full = max-width: 100% -->
+                                <div class="card p-0 m-10">
+                                    <!-- p-0 = padding: 0 -->
+                                    <img src="./img/wilderpeople.jpg" class="img-fluid rounded" alt="...">
+                                    <!-- rounded-top = rounded corners on the top -->
+                                    <!-- First content container nested inside card -->
+                                    <div class="content ">
+                                        <h2 class="content-title">
+                                            Hunt for the wilder people<br />
+                                            <span class="badge"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+                        <i class="fa fa-heart text-danger mr-5" aria-hidden="true"></i> 8.5 <!-- text-danger = color: danger-color, mr-5 = margin-right: 0.5rem (5px) -->
+                      </span>
+                                        </h2>
+                                        <div class="font-size-10 text-clamped">The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack
+                                            Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd.
+                                        </div>
+                                        <div class="mt-20 font-size-10">
+                                            <!-- Pill badges -->
+                                            <span class="badge badge-pill text-muted">These</span>
+                                            <span class="badge badge-pill text-muted">are</span>
+                                            <span class="badge badge-pill text-muted">freaking</span>
+                                            <span class="badge badge-pill text-muted">beautiful</span>
+                                            <span class="badge badge-pill text-muted">badges</span>
+                                            <br />
+                                            <span class="text-muted font-size-10"><br />&nbsp;&nbsp;
+                            <i class="fa fa-calendar mr-5" aria-hidden="true"></i> 15 / 05 / 2020 <!-- mr-5 = margin-right: 0.5rem (5px) -->
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <a href="#modal-5" class="text-decoration-none">
+                            <!-- Card with no padding with multiple content containers nested inside of it -->
+                            <div class="mw-full">
+                                <!-- w-600 = width: 60rem (600px), mw-full = max-width: 100% -->
+                                <div class="card p-0 m-10">
+                                    <!-- p-0 = padding: 0 -->
+                                    <img src="./img/lostboys.jpg" class="img-fluid rounded" alt="...">
+                                    <!-- rounded-top = rounded corners on the top -->
+                                    <!-- First content container nested inside card -->
+                                    <div class="content ">
+                                        <h2 class="content-title">
+                                            The Lost Boys <br />
+                                            <span class="badge"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+                        <i class="fa fa-heart text-danger mr-5" aria-hidden="true"></i> 8.5 <!-- text-danger = color: danger-color, mr-5 = margin-right: 0.5rem (5px) -->
+                      </span>
+                                        </h2>
+                                        <div class="font-size-10 text-clamped">The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack
+                                            Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd.
+                                        </div>
+                                        <div class="mt-20 font-size-10">
+                                            <!-- Pill badges -->
+                                            <span class="badge badge-pill text-muted">These</span>
+                                            <span class="badge badge-pill text-muted">are</span>
+                                            <span class="badge badge-pill text-muted">freaking</span>
+                                            <span class="badge badge-pill text-muted">beautiful</span>
+                                            <span class="badge badge-pill text-muted">badges</span>
+                                            <br />
+                                            <span class="text-muted font-size-10"><br />&nbsp;&nbsp;
+                            <i class="fa fa-calendar mr-5" aria-hidden="true"></i> 15 / 05 / 2020 <!-- mr-5 = margin-right: 0.5rem (5px) -->
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <a href="#modal-5" class="text-decoration-none">
+                            <!-- Card with no padding with multiple content containers nested inside of it -->
+                            <div class="mw-full">
+                                <!-- w-600 = width: 60rem (600px), mw-full = max-width: 100% -->
+                                <div class="card p-0 m-10">
+                                    <!-- p-0 = padding: 0 -->
+                                    <img src="./img/clockworkorange.jpg" class="img-fluid rounded" alt="...">
+                                    <!-- rounded-top = rounded corners on the top -->
+                                    <!-- First content container nested inside card -->
+                                    <div class="content ">
+                                        <h2 class="content-title">
+                                            A Clockwork Orange <br />
+                                            <span class="badge"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+                        <i class="fa fa-heart text-danger mr-5" aria-hidden="true"></i> 8.5 <!-- text-danger = color: danger-color, mr-5 = margin-right: 0.5rem (5px) -->
+                      </span>
+                                        </h2>
+                                        <div class="font-size-10 text-clamped">The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack
+                                            Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd.
+                                        </div>
+                                        <div class="mt-20 font-size-10">
+                                            <!-- Pill badges -->
+                                            <span class="badge badge-pill text-muted">These</span>
+                                            <span class="badge badge-pill text-muted">are</span>
+                                            <span class="badge badge-pill text-muted">freaking</span>
+                                            <span class="badge badge-pill text-muted">beautiful</span>
+                                            <span class="badge badge-pill text-muted">badges</span>
+                                            <br />
+                                            <span class="text-muted font-size-10"><br />&nbsp;&nbsp;
+                            <i class="fa fa-calendar mr-5" aria-hidden="true"></i> 15 / 05 / 2020 <!-- mr-5 = margin-right: 0.5rem (5px) -->
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <a href="#modal-5" class="text-decoration-none">
+                            <!-- Card with no padding with multiple content containers nested inside of it -->
+                            <div class="mw-full">
+                                <!-- w-600 = width: 60rem (600px), mw-full = max-width: 100% -->
+                                <div class="card p-0 m-10">
+                                    <!-- p-0 = padding: 0 -->
+                                    <img src="./img/parasite.jpg" class="img-fluid rounded" alt="...">
+                                    <!-- rounded-top = rounded corners on the top -->
+                                    <!-- First content container nested inside card -->
+                                    <div class="content ">
+                                        <h2 class="content-title">
+                                            The Shining <br />
+                                            <span class="badge"> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+                        <i class="fa fa-heart text-danger mr-5" aria-hidden="true"></i> 8.5 <!-- text-danger = color: danger-color, mr-5 = margin-right: 0.5rem (5px) -->
+                      </span>
+                                        </h2>
+                                        <div class="font-size-10 text-clamped">The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack
+                                            Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd.
+                                        </div>
+                                        <div class="mt-20 font-size-10">
+                                            <!-- Pill badges -->
+                                            <span class="badge badge-pill text-muted">These</span>
+                                            <span class="badge badge-pill text-muted">are</span>
+                                            <span class="badge badge-pill text-muted">freaking</span>
+                                            <span class="badge badge-pill text-muted">beautiful</span>
+                                            <span class="badge badge-pill text-muted">badges</span>
+                                            <br />
+                                            <span class="text-muted font-size-10"><br />&nbsp;&nbsp;
+                            <i class="fa fa-calendar mr-5" aria-hidden="true"></i> 15 / 05 / 2020 <!-- mr-5 = margin-right: 0.5rem (5px) -->
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <nav class="m-20" aria-label="Page navigation">
+                <ul class="pagination text-center">
+                    <!-- Previous page -->
+                    <li class="page-item">
+                        <a href="#" class="page-link">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                            <!-- sr-only = only for screen readers -->
+                        </a>
+                    </li>
+                    <!-- Pages and ellipses -->
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item ellipsis"></li>
+                    <li class="page-item"><a href="#" class="page-link">45</a></li>
+                    <!-- Active page item -->
+                    <li class="page-item active" aria-current="page">
+                        <a href="#" class="page-link" tabindex="-1">46</a>
+                    </li>
+                    <li class="page-item"><a href="#" class="page-link">47</a></li>
+                    <li class="page-item ellipsis"></li>
+                    <li class="page-item"><a href="#" class="page-link">86</a></li>
+                    <!-- Next page -->
+                    <li class="page-item">
+                        <a href="#" class="page-link">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                            <!-- sr-only = only for screen readers -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Content wrapper end -->
+
+        <nav class="navbar navbar-fixed-bottom">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item font-size-10">
+                    <a href="https://www.instagram.com/arpit.media/" target="_blank" rel="noopener" class="nav-link pr-5">
+                        <span class="d-none d-sm-inline">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> &nbsp;&nbsp;Follow
+                    </span>
+                        <span class="d-sm-none">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> Follow
+                    </span>
+                    </a>
+                </li>
+            </ul>
+            <span class="navbar-text text-muted font-size-10">
+            © Copyright 2021, @arpit.media
+        </span>
+        </nav>
+
+    </div>
+    <!-- Page wrapper end -->
+
+    <!-- Halfmoon JS -->
+    <script src="js/halfmoon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript">
+        /* Things to do once the DOM is loaded */
+        document.addEventListener("DOMContentLoaded", function() {
+            // Init Particle JS
+            // particlesJS.load(
+            //     "particles-js",
+            //     "./static/particlesjs-space-config.json",
+            //     function() {}
+            // );
+        });
+    </script>
+</body>
+
+</html>
